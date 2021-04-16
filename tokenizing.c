@@ -1,3 +1,5 @@
+#define _CRT_SECURE_NO_WARNINGS
+
 #include "tokenizing.h" 
 
 void tokenizing() {
@@ -15,11 +17,10 @@ void tokenizing() {
 		if (strcmp(phrases, "q") == 0) break; 
 		
 		phrase = strtok(phrases, ","); 
-		
 		p_counter = 1;
-		
 		while (phrase) {
-			printf("Phrase #%d is \'%s\'\n", p_counter++, phrase); phrase = strtok(NULL, "f");
+			printf("Phrase #%d is \'%s\'\n", p_counter++, phrase); 
+			phrase = strtok(NULL, ",");
 		}
 
 	} 
