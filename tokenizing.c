@@ -1,6 +1,32 @@
 #include "tokenizing.h" 
 
 void tokenizing() {
+
+	// version 2
+	printf("*** Start of Tokenizing Phrases Demo ***\n"); 
+	
+	char phrases[200]; 
+	char* phrase; 
+	int p_counter; 
+
+	while (TRUE) {
+		printf("Type a few phrases separated by comma(q - to quit):\n"); 
+		gets(phrases); 
+		if (strcmp(phrases, "q") == 0) break; 
+		
+		phrase = strtok(phrases, ","); 
+		
+		p_counter = 1;
+		
+		while (phrase) {
+			printf("Phrase #%d is \'%s\'\n", p_counter++, phrase); phrase = strtok(NULL, "f");
+		}
+
+	} 
+	
+	printf("*** End of Tokenizing Phrases Demo ***\n\n");
+
+	// version 1
 	printf("*** Start of Tokenizing Words Demo ***\n");
 	char words[200];
 
