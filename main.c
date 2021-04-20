@@ -8,7 +8,7 @@
 // -----------------------------------------------------------------------------------
 int main(void)
 {
-	manipulating();
+	//manipulating();
 	tokenizing();
 	return 0;
 }

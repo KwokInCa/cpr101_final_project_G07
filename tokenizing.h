@@ -5,5 +5,7 @@
 #define TRUE 1 
 
 void tokenizing();
+void tokenizing_words(char* words);
+void tokenizing_phrases(char* phrasees);
 
 #endif 
