@@ -3,6 +3,24 @@
 #include "tokenizing.h" 
 
 void tokenizing() {
+	// version 3
+
+	printf("*** Start of Tokenizing Sentences Demo ***\n"); 
+	char sentences[200]; 
+	char* sentence; 
+	int s_counter;
+	while (TRUE) {
+		printf("Type a few sentences separated by dot(q - to quit):\n"); 
+		gets(sentences); 
+		if (strcmp(sentences, "q") == 0) break; 
+		sentence = strtok(sentences, "."); 
+		s_counter = 1; 
+		while (sentence) {
+
+			printf("sentence #%d is \'%s\'\n", s_counter++, sentence); 
+			sentence = strtok(NULL, ".");
+		}
+	} printf("*** End of Tokenizing Sentences Demo ***\n\n");
 
 	// version 2
 	printf("*** Start of Tokenizing Phrases Demo ***\n"); 
